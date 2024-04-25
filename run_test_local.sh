@@ -1,0 +1,1 @@
+python runner.py -o bbWW_v0.coffea -p bbWW/processors/processor_bbWW.py -c bbWW/metadata/local_bbWW.yml -m bbWW/metadata/local_bbWW.yml -op bbWW/hists/ -y UL16_preVFP -d GluGluToHHTo2B2VLNu2J TTToSemiLeptonic -t
