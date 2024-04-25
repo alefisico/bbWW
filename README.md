@@ -10,7 +10,7 @@ cd coffea4bees/python/
 git clone ssh://git@gitlab.cern.ch:7999/algomez/bbWW.git
 ```
 
-## Set Environment
+## Set Environment at LPC
 
 This code has been tested at the cmslpc, and to simplify the setup, it can be used with the container needed to run on lpc condor computers. To set this container under `coffea4bees/`:
 ```
@@ -23,4 +23,17 @@ source set_shell.sh
 ```
 
 Remember to run this previous command (aka set your environment) *every time you want to run something*.
+
+
+## Set Environment in local machine (Ubuntu)
+
+You can set a minimal configuration using a conda environment, for local tests. Keep in mind that this enviroment does **NOT** contained all the packages installed in the container. 
+
+First install [conda-miniforge](https://github.com/conda-forge/miniforge) in your computer (if you haven't done it). If you dont have a cern/fnal account, you can clone the packages from the github repositories:
+```
+git clone git@github.com:alefisico/coffea4bees.git
+cd coffea4bes/python/
+git clone git@github.com:alefisico/bbWW.git
+```
+
 
