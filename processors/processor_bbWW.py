@@ -73,7 +73,7 @@ class analysis(processor.ProcessorABC):
         listOfCuts.add( "goldenJson", jsonFilter )
 
         # adding met filters
-        METcleaning = mask_event_decision( events, decision='AND', branch='Flag', list_to_mask=self.corrections_metadata[year]['METFilter'], list_to_skip=['BadPFMuonDzFilter', 'hfNoisyHitsFilter']  )
+        METcleaning = mask_event_decision( events, decision='AND', branch='Flag', list_to_mask=self.corrections_metadata[year]['NoiseFilter'], list_to_skip=['BadPFMuonDzFilter', 'hfNoisyHitsFilter']  )
         listOfCuts.add( "PassesMETFilters", METcleaning )
 
         ##############################################################
