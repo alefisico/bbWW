@@ -35,5 +35,13 @@ git clone git@github.com:alefisico/coffea4bees.git
 cd coffea4bes/python/
 git clone git@github.com:alefisico/bbWW.git
 ```
+Then create the conda environment, using the `environment.yml` file in `coffea4bees/`:
+```
+cd coffea4bees/   ### if you are not there
+conda create env --file=environment.yml
+```
 
-
+Then dont forget to set your environment everytime you want to run something:
+```
+conda activate coffea4bees
+```
