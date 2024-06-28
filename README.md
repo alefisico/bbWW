@@ -7,7 +7,11 @@ This package works on top of [coffea4bees](https://gitlab.cern.ch/cms-cmu/coffea
 ```
 git clone ssh://git@gitlab.cern.ch:7999/cms-cmu/coffea4bees.git
 cd coffea4bees/python/
-git clone ssh://git@gitlab.cern.ch:7999/algomez/bbWW.git
+git clone ssh://git@gitlab.cern.ch:7999/algomez/bbWW.git --recursive
+cd bbWW/
+git clone https://github.com/mcremone/decaf.git -b UL --depth 1
+cd ../data/
+ln -s ../bbWW/decaf/analysis/data/jsons/
 ```
 
 ## Set Environment at LPC
