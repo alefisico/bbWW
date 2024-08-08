@@ -15,7 +15,7 @@ runner:
 config:
   year: 2016preVFP
   xsec: 1
-  corrections: 'bbWW/decaf/analysis/data/corrections.coffea'
+  corrections: 'data/corrections.coffea'
   ids: 'bbWW/decaf/analysis/data/ids.coffea'
   common: 'bbWW/decaf/analysis/data/common.coffea'
 
