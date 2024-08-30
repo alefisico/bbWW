@@ -11,27 +11,34 @@ runner:
     - T2_CH_MIT
     - T2_CH_Nebraska
 
-### year and xs is a placeholder, we need to change it later
 config:
-  year: 2016preVFP
-  xsec: 1
-  corrections: 'data/corrections.coffea'
-  ids: 'bbWW/decaf/analysis/data/ids.coffea'
-  common: 'bbWW/decaf/analysis/data/common.coffea'
+  year: '2017'    ### this is not used, is a dummy argument
+  xsec: 1   ### this is not used, is a dummy argument
 
 datasets:
   GluGluToHHTo2B2VLNu2J:
-    xs: 1.
+    xs: 0.003384123
     'UL16_preVFP':
       nanoAOD: bbWW/metadata/JMENano_HHto2B2VLNu2J_UL16.txt
+      nanoAOD_dataset: /GluGluToHHTo2B2VLNu2J_node_cHHH1_TuneCUETP8M1_PSWeights_13TeV-powheg-pythia8/algomez-RunIISummer16MiniAODv3_JMENanoAODv9_PrivateProd-00000000000000000000000000000000/USER
+    'UL17':
+      nanoAOD: bbWW/metadata/JMENano_HHto2B2VLNu2J_UL17.txt
+      nanoAOD_dataset: /GluGluToHHTo2B2VLNu2J_node_cHHH1_TuneCP5_PSWeights_13TeV-powheg-pythia8/algomez-RunIIFall17MiniAODv2_JMENanoAODv9_PrivateProdv1-9e251461453be030477d2b06078a539d/USER
+    'UL18':
+      nanoAOD: bbWW/metadata/JMENano_HHto2B2VLNu2J_UL17.txt
+      nanoAOD_dataset: /GluGluToHHTo2B2VLNu2J_node_cHHH1_TuneCP5_PSWeights_13TeV-powheg-pythia8/algomez-RunIIAutumn18MiniAOD_JMENanoAODv9_PrivateProdv1-86803f06cf33a8309b1bf992106bb3ff/USER
   TTToSemiLeptonic:
-    xs: 1.
-    'UL16_preVFP':
+    xs: 365.4574
+    '2016_preVFP':
       nanoAOD: /TTToSemiLeptonic_TuneCP5_13TeV-powheg-pythia8/RunIISummer20UL16NanoAODv9-20UL16JMENano_106X_mcRun2_asymptotic_v17-v1/NANOAODSIM
+    'UL17':
+      nanoAOD: /TTToSemiLeptonic_TuneCP5_13TeV-powheg-pythia8/RunIISummer20UL17NanoAODv9-20UL17JMENano_106X_mc2017_realistic_v9-v1/NANOAODSIM
+    'UL18':
+      nanoAOD: /TTToSemiLeptonic_TuneCP5_13TeV-powheg-pythia8/RunIISummer20UL18NanoAODv9-20UL18JMENano_106X_upgrade2018_realistic_v16_L1v1-v1/NANOAODSIM
 
   data:
     'UL16_preVFP':
-      lumi: 1.
+      lumi: 19.5
       trigger:
         - IsoMu22
         - IsoTkMu22
@@ -42,5 +49,61 @@ datasets:
         - Ele27_WPTight_Gsf
         - Ele25_eta2p1_WPTight_Gsf
         - Ele27_eta2p1_WPLoose_Gsf
-      nanoAOD: /DoubleMuon/Run2018B-UL2018_MiniAODv2_JMENanoAODv9-v1/NANOAOD
+      nanoAOD: 
+        C: /DoubleMuon/Run2016C-HIPM_UL2016_MiniAODv2_JMENanoAODv9-v2/NANOAOD
+        D: /DoubleMuon/Run2016D-HIPM_UL2016_MiniAODv2_JMENanoAODv9-v2/NANOAOD
+        E: /DoubleMuon/Run2016E-HIPM_UL2016_MiniAODv2_JMENanoAODv9-v2/NANOAOD
+        F: /DoubleMuon/Run2016F-HIPM_UL2016_MiniAODv2_JMENanoAODv9-v2/NANOAOD
+    'UL16_postVFP':
+      lumi: 16.8
+      trigger:
+        - IsoMu22
+        - IsoTkMu22
+        - IsoMu22_eta2p1
+        - IsoTkMu22_eta2p1
+        - IsoMu24
+        - IsoTkMu24
+        - Ele27_WPTight_Gsf
+        - Ele25_eta2p1_WPTight_Gsf
+        - Ele27_eta2p1_WPLoose_Gsf
+      nanoAOD: 
+        F: /DoubleMuon/Run2016F-UL2016_MiniAODv2_JMENanoAODv9-v2/NANOAOD
+        G: /DoubleMuon/Run2016G-UL2016_MiniAODv2_JMENanoAODv9-v1/NANOAOD
+        H: /DoubleMuon/Run2016H-UL2016_MiniAODv2_JMENanoAODv9-v1/NANOAOD
 
+    'UL17':
+      lumi: 41.48
+      trigger:
+        - IsoMu22
+        - IsoTkMu22
+        - IsoMu22_eta2p1
+        - IsoTkMu22_eta2p1
+        - IsoMu24
+        - IsoTkMu24
+        - Ele27_WPTight_Gsf
+        - Ele25_eta2p1_WPTight_Gsf
+        - Ele27_eta2p1_WPLoose_Gsf
+      nanoAOD: 
+        B: /DoubleMuon/Run2017B-UL2017_MiniAODv2_JMENanoAODv9-v1/NANOAOD
+        C: /DoubleMuon/Run2017C-UL2017_MiniAODv2_JMENanoAODv9-v1/NANOAOD
+        D: /DoubleMuon/Run2017D-UL2017_MiniAODv2_JMENanoAODv9-v1/NANOAOD
+        E: /DoubleMuon/Run2017E-UL2017_MiniAODv2_JMENanoAODv9-v1/NANOAOD
+        F: /DoubleMuon/Run2017F-UL2017_MiniAODv2_JMENanoAODv9-v1/NANOAOD
+
+    'UL18':
+      lumi: 59.83
+      trigger:
+        - IsoMu22
+        - IsoTkMu22
+        - IsoMu22_eta2p1
+        - IsoTkMu22_eta2p1
+        - IsoMu24
+        - IsoTkMu24
+        - Ele27_WPTight_Gsf
+        - Ele25_eta2p1_WPTight_Gsf
+        - Ele27_eta2p1_WPLoose_Gsf
+      nanoAOD: 
+        A: /DoubleMuon/Run2018A-UL2018_MiniAODv2_JMENanoAODv9-v1/NANOAOD
+        B: /DoubleMuon/Run2018B-UL2018_MiniAODv2_JMENanoAODv9-v1/NANOAOD
+        C: /DoubleMuon/Run2018C-UL2018_MiniAODv2_JMENanoAODv9-v1/NANOAOD
+        D: /DoubleMuon/Run2018D-UL2018_MiniAODv2_JMENanoAODv9-v1/NANOAOD

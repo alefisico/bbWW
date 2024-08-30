@@ -10,8 +10,6 @@ cd coffea4bees/python/
 git clone ssh://git@gitlab.cern.ch:7999/algomez/bbWW.git --recursive
 cd bbWW/
 git clone https://github.com/mcremone/decaf.git -b UL --depth 1
-cd ../data/
-ln -s ../bbWW/decaf/analysis/data/jsons/
 ```
 
 ## Set Environment at LPC
@@ -48,4 +46,32 @@ conda create env --file=environment.yml
 Then dont forget to set your environment everytime you want to run something:
 ```
 conda activate coffea4bees
+```
+
+
+## How to run processor without decaf
+
+An (old) version of a processor (almost copied from the TAMU group) is located in [processors/processor_bbWW.py](./processors/processor_bbWW.py). To run this processor, you can run the following command, **after you set your enviroment or open the container**:
+
+```
+cd python/
+python runner.py -o bbWW_v0.coffea -p bbWW/processors/processor_bbWW.py -c bbWW/metadata/bbWW.yml -m bbWW/metadata/bbWW.yml -op bbWW/hists/ -y UL16_preVFP -d GluGluToHHTo2B2VLNu2J TTToSemiLeptonic -t
+```
+
+## How to run the decaf processor
+
+Only for the first time that you run, you need to run the following commands **inside the container**:
+
+```
+cd python/
+python decaf/analysis/utils/ids.py
+python decaf/analysis/utils/corrections.py
+python decaf/analysis/utils/common.py
+```
+
+If you clone the decaf repository, there is a processor in `decaf/analysis/processors/bbww.py`. To run it inside the coffea4bees packages, you need the metadata file [medatada/bbWW_decaf.yml](./metadata/bbWW_decaf.yml), and then **after you set your environment or open the container**:
+
+```
+cd python/
+python runner.py -p decaf/analysis/processors/bbww.py -m bbWW/metadata/bbWW_decaf.yml -c bbWW/metadata/bbWW_decaf.yml -y UL16_preVFP -d GluGluToHHTo2B2VLNu2J -t -o bbWW_v0.coffea -op bbWW/hists/
 ```
