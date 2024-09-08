@@ -23,10 +23,10 @@ datasets:
       nanoAOD_dataset: /GluGluToHHTo2B2VLNu2J_node_cHHH1_TuneCUETP8M1_PSWeights_13TeV-powheg-pythia8/algomez-RunIISummer16MiniAODv3_JMENanoAODv9_PrivateProd-00000000000000000000000000000000/USER
     'UL17':
       nanoAOD: bbWW/metadata/JMENano_HHto2B2VLNu2J_UL17.txt
-      nanoAOD_dataset: /GluGluToHHTo2B2VLNu2J_node_cHHH1_TuneCP5_PSWeights_13TeV-powheg-pythia8/algomez-RunIIFall17MiniAODv2_JMENanoAODv9_PrivateProdv1-9e251461453be030477d2b06078a539d/USER
+      nanoAOD_dataset: /GluGluToHHTo2B2VLNu2J_node_cHHH1_TuneCP5_PSWeights_13TeV-powheg-pythia8/algomez-RunIIFall17MiniAODv2_JMENanoAODv9_PrivateProdv1p1-00000000000000000000000000000000/USER
     'UL18':
       nanoAOD: bbWW/metadata/JMENano_HHto2B2VLNu2J_UL17.txt
-      nanoAOD_dataset: /GluGluToHHTo2B2VLNu2J_node_cHHH1_TuneCP5_PSWeights_13TeV-powheg-pythia8/algomez-RunIIAutumn18MiniAOD_JMENanoAODv9_PrivateProdv1-86803f06cf33a8309b1bf992106bb3ff/USER
+      nanoAOD_dataset: /GluGluToHHTo2B2VLNu2J_node_cHHH1_TuneCP5_PSWeights_13TeV-powheg-pythia8/algomez-RunIIAutumn18MiniAOD_JMENanoAODv9_PrivateProdv1p1-00000000000000000000000000000000/USER
   TTToSemiLeptonic:
     xs: 365.4574
     '2016_preVFP':
